@@ -127,6 +127,7 @@ def run():
             logging.info('Processing File=' + name)
             if process(name):
                 logging.debug('Successfully processed File=' + name)
+            time.sleep(float(parser.get('directories', 'throttleTime')))
     logging.debug('\n\t+++++Going to sleep for ' + parser.get('directories', 'sleepTime')+" seconds +++++++")
     time.sleep(float(parser.get('directories', 'sleepTime')))
 
